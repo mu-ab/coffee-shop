@@ -4,6 +4,7 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "Ahmed Musa",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -15,6 +16,8 @@
   },
   "dependencies": {
     "gatsby": "^2.23.7",
+    "gatsby-plugin-netlify-cms": "^6.7.0",
+    "netlify-cms-app": "^2.15.66",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
