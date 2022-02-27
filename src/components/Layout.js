@@ -1,15 +1,25 @@
 import React from "react"
-import { header, inner } from "./Layout.module.css"
+import {
+  header,
+  headerInner,
+  headerH1,
+  headerH1Anchor,
+} from "./Layout.module.css"
 import { Link } from "gatsby"
 
 export default function Layout({ children }) {
   return (
     <div>
-      <header id={header}>
-        <div id={inner}>
-          <h1>
-            <Link to="/">Joe's Coffee Shop</Link>
+      <header className={header}>
+        <div className={headerInner}>
+          <h1 className={headerH1}>
+            <Link className={headerH1Anchor} to="/">
+              Joe's Coffee Shop
+            </Link>
           </h1>
+          <Link className={headerH1Anchor} to="/blog">
+            Blog
+          </Link>
         </div>
       </header>
       <main>{children}</main>
