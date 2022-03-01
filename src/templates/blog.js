@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import { blog } from "./blog.module.css"
+
+import { blog } from "./blog.module.scss"
 
 export default function BlogTemplate({ data }) {
   return (

@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {

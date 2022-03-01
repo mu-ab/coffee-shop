@@ -1,0 +1,23 @@
+.header {
+  font-family: "Oswald", sans-serif;
+  background: url("/coffee.jpg");
+  background-size: cover;
+  color: #ffffff;
+
+  div {
+    background: rgba(119, 79, 56, 0.85);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+      flex-grow: 1;
+    }
+  }
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}

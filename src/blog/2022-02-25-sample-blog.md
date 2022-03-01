@@ -1,7 +1,9 @@
 ---
 title: sample Blog
 date: 2022-02-25T22:19:45.445Z
+contentKey: blog
 ---
+
 **This is a sample blog**
 
 1. **Apple**

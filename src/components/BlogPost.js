@@ -1,6 +1,6 @@
 import React from "react"
-import { blog, blogH2, blogH3 } from "./BlogPost.module.css"
 import { Link } from "gatsby"
+import { blog } from "./BlogPost.module.scss"
 
 export default function BlogPost({ title, date, excerpt, slug }) {
   return (
@@ -8,8 +8,8 @@ export default function BlogPost({ title, date, excerpt, slug }) {
       <h2>
         <Link to={slug}>{title}</Link>
       </h2>
-      <h2 className={blogH2}>{title}</h2>
-      <h3 className={blogH3}>{date}</h3>
+      <h2>{title}</h2>
+      <h3>{date}</h3>
       <p>{excerpt}</p>
     </article>
   )

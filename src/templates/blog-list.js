@@ -3,13 +3,13 @@ import { graphql, Link } from "gatsby"
 
 import BlogPost from "../components/BlogPost"
 import Layout from "../components/Layout"
+
 import {
   hero,
-  heroHeader,
   blogList,
   pageLinks,
   pageLinksAnchor,
-} from "./blog-list.module.css"
+} from "./blog-list.module.scss"
 
 export default function BlogListTemplate({ data, pageContext }) {
   // Generate the previous and next page URLs.
@@ -23,8 +23,8 @@ export default function BlogListTemplate({ data, pageContext }) {
 
   return (
     <Layout>
-      <div id={hero}>
-        <h1 id={heroHeader}>The coffee Blog</h1>
+      <div className={hero}>
+        <h1>The coffee Blog</h1>
       </div>
 
       <main className={blogList}>
@@ -38,15 +38,15 @@ export default function BlogListTemplate({ data, pageContext }) {
           />
         ))}
       </main>
-      <div id={pageLinks}>
+      <div className={pageLinks}>
         {pageContext.currentPage > 1 && (
-          <Link id={pageLinks} to={previousPage}>
+          <Link className={pageLinks} to={previousPage}>
             {"<< Previous page"}
           </Link>
         )}
 
         {pageContext.currentPage < pageContext.pageCount && (
-          <Link id={pageLinksAnchor} to={nextPage}>
+          <Link className={pageLinksAnchor} to={nextPage}>
             {" "}
             {"Next Page >>"}{" "}
           </Link>
@@ -60,7 +60,7 @@ export const query = graphql`
   query BlogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      # filter: { frontmatter: { contentKey: { eq: "blog" } } }
+      filter: { frontmatter: { contentKey: { eq: "blog" } } }
       limit: $limit
       skip: $skip
     ) {

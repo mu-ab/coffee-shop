@@ -1,7 +1,9 @@
 ---
 title: Welcome to the Coffee Blog
 date: 2022-02-19T23:25:58.307Z
+contentKey: blog
 ---
+
 ![cup of coffee](/img/cup-of-coffee.jpg "cup of coffee")
 
 # `Hello!`

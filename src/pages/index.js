@@ -3,10 +3,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/Layout"
-
-import { hero } from "./index.module.css"
-
 import BlogList from "../components/BlogList"
+
+import { hero } from "./index.module.scss"
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
@@ -21,7 +20,7 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <div id={hero}>
+      <div className={hero}>
         <h1>{data.site.siteMetadata.title}</h1>
       </div>
       <BlogList />
