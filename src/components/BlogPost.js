@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import { blog } from "./BlogPost.module.scss"
+import { Link } from "gatsby"
 
 export default function BlogPost({ title, date, excerpt, slug }) {
   return (

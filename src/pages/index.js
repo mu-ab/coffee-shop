@@ -1,11 +1,10 @@
 import React from "react"
 
-import { graphql, useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
-import BlogList from "../components/BlogList"
-
 import { hero } from "./index.module.scss"
+import BlogList from "../components/BlogList"
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`

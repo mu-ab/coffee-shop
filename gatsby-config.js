@@ -4,12 +4,24 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("node-sass"),
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
         path: "src/blog",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pageData",
+        path: "src/pageData",
       },
     },
     "gatsby-transformer-remark",
