@@ -25,13 +25,13 @@ collections:
         name: "body"
         widget: "markdown"
   - name: "pages"
-    label: "pages"
+    label: "Pages"
     files:
       - file: "src/pageData/index.md"
         label: "Index Page"
         name: "Index-page"
         fields:
-          - name: "contentkey"
+          - name: "contentKey"
             widget: "hidden"
             default: "indexPage"
           - label: "Tagline"
