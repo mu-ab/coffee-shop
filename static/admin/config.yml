@@ -39,4 +39,4 @@ collections:
             widget: "string"
           - label: "Hero Image"
             name: "heroImage"
-            widget: "Image"
+            widget: "image"
