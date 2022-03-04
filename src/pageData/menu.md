@@ -1,5 +1,6 @@
 ---
 title: coffee and Bakery Menu
+contentKey: menu
 categories:
   - name: Iced Drinks
     items:
