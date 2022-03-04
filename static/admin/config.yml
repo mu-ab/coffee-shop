@@ -52,7 +52,7 @@ collections:
             name: "title"
             widget: "string"
           - label: "Categories"
-            # label_singular: "Category"
+            label_singular: "Category"
             name: "items"
             widget: "list"
             fields:
