@@ -1,11 +1,27 @@
 import React from "react"
 import { header } from "./Layout.module.scss"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 export default function Layout({ children }) {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "coffee.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div>
-      <header className={header}>
+      <BackgroundImage
+        className={header}
+        fluid={data.file.childImageSharp.fluid}
+      >
         <div>
           <h1>
             <Link to="/">Joe's Coffee Shop</Link>
@@ -13,7 +29,7 @@ export default function Layout({ children }) {
           <Link to="/blog">Blog</Link>
           <Link to="/menu">Menu</Link>
         </div>
-      </header>
+      </BackgroundImage>
       <main>{children}</main>
     </div>
   )

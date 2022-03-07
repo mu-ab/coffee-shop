@@ -30,6 +30,11 @@ collections:
       - file: "src/pageData/index.md"
         label: "Index Page"
         name: "Index-page"
+
+        # Experimental feature --- start
+        media_folder: ""
+        # Experimental feature --- end
+
         fields:
           - name: "contentKey"
             widget: "hidden"

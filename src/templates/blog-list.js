@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import BlogPost from "../components/BlogPost"
 import Layout from "../components/Layout"
@@ -23,9 +24,9 @@ export default function BlogListTemplate({ data, pageContext }) {
 
   return (
     <Layout>
-      <div className={hero}>
+      <BackgroundImage className={hero} fluid={data.file.childImageSharp.fluid}>
         <h1>The coffee Blog</h1>
-      </div>
+      </BackgroundImage>
 
       <main className={blogList}>
         {data.allMarkdownRemark.edges.map(node => (
@@ -75,6 +76,15 @@ export const query = graphql`
             slug
           }
           excerpt
+        }
+      }
+    }
+
+    #  processed Image query
+    file(relativePath: { eq: "latte.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
         }
       }
     }
