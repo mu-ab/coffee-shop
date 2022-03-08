@@ -14,7 +14,6 @@ import {
 
 export default function BlogListTemplate({ data, pageContext }) {
   // Generate the previous and next page URLs.
-
   const previousPage =
     pageContext.currentPage === 2
       ? "/blog"

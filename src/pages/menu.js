@@ -3,29 +3,11 @@ import React from "react"
 import Layout from "../components/Layout"
 import MenuCategory from "../components/MenuCategory"
 
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 import { main } from "./menu.module.scss"
 
-export default function Menu() {
-  const data = useStaticQuery(graphql`
-    {
-      markdownRemark(frontmatter: { contentKey: { eq: "menu" } }) {
-        frontmatter {
-          title
-          categories {
-            name
-            items {
-              name
-              description
-              price
-            }
-          }
-        }
-      }
-    }
-  `)
-
+export default function Menu({ data }) {
   return (
     <Layout>
       <div className={main}>
@@ -39,3 +21,21 @@ export default function Menu() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  {
+    markdownRemark(frontmatter: { contentKey: { eq: "menu" } }) {
+      frontmatter {
+        title
+        categories {
+          name
+          items {
+            name
+            description
+            price
+          }
+        }
+      }
+    }
+  }
+`
