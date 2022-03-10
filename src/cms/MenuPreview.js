@@ -1,5 +1,8 @@
 import React from "react"
-import MenuPage from "../pages/menu"
+import "../global.css"
+
+import Menu from "../components/Menu"
+// import Menu from "../components/Menu"
 
 export default function MenuPreview({ entry }) {
   const menu = entry.getIn(["data"]).toJS()
@@ -12,5 +15,5 @@ export default function MenuPreview({ entry }) {
     },
   }
 
-  return <MenuPage data={data} />
+  return <Menu data={data} />
 }

@@ -5,12 +5,12 @@ import MenuCategory from "../components/MenuCategory"
 
 import { graphql } from "gatsby"
 
-import { main } from "./menu.module.scss"
+// import { main } from "./menu.module.scss"
 
 export default function Menu({ data }) {
   return (
     <Layout>
-      <div className={main}>
+      <div>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
         <div>
           {data.markdownRemark.frontmatter.categories.map(category => (
